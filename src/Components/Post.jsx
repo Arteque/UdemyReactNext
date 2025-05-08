@@ -1,14 +1,11 @@
-const names = ['Maximilian', 'Manuel']
+import classes from "./Post.module.css";
 
-const Post = () => {
-
-  const choosenName = Math.random() > 0.5  ? names[0] : names[1]
-
+const Post = ({ author, body }) => {
   return (
-    <div>
-      <p>{choosenName}</p>
-      <p>React.js is awesome!</p>
-    </div>
+    <li className={classes.post}>
+      <span className={classes.author}>{author}</span>
+      <span className={classes.text}>{body}</span>
+    </li>
   );
 };
 
